@@ -3,7 +3,10 @@
 </template>
 
 <script>
+import Layout from "../Layouts/Guest/Layout.vue";
+
 export default {
-    name: "Welcome"
+    name: "Welcome",
+    layout: Layout
 }
 </script>
