@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "axios": "^1.1.2",
@@ -11,7 +11,9 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@inertiajs/vue3": "^1.0.13",
         "@vitejs/plugin-vue": "^4.4.0",
+        "@vue/server-renderer": "^3.3.7",
         "lodash": "^4.17.21",
         "vue": "^3.2.36",
         "vue-loader": "^17.3.0"
