@@ -5,7 +5,7 @@ namespace App\Http\Resources\Catalog;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CategoryResource extends JsonResource
+class ProductResource extends JsonResource
 {
     public static $wrap = null;
 
@@ -16,7 +16,9 @@ class CategoryResource extends JsonResource
             'name' => $this->whenHas('name'),
             'slug' => $this->whenHas('slug'),
             'description' => $this->whenHas('description'),
-            'products' => ProductResource::collection($this->whenLoaded('products')),
+            'price' => $this->whenHas('price'),
+            'brand' => new BrandResource($this->whenLoaded('brand')),
+            'category' => new CategoryResource($this->whenLoaded('category')),
         ];
     }
 }

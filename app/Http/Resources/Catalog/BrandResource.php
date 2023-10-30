@@ -15,6 +15,7 @@ class BrandResource extends JsonResource
             'id' => $this->whenHas('id'),
             'name' => $this->whenHas('name'),
             'slug' => $this->whenHas('slug'),
+            'products' => ProductResource::collection($this->whenLoaded('products')),
         ];
     }
 }
