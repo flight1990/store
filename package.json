@@ -20,6 +20,7 @@
         "@vitejs/plugin-vue": "^4.4.0",
         "@vue/server-renderer": "^3.3.7",
         "lodash": "^4.17.21",
+        "preline": "^1.9.0",
         "vue": "^3.2.36",
         "vue-loader": "^17.3.0"
     }
